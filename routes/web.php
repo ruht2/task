@@ -11,6 +11,9 @@ Route::get('/task', function(){
     return view('task');
 });
 
+Route::get('/ruht', function () {
+    return view('ruht');
+});
 
 
-
+    
