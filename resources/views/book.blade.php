@@ -7,6 +7,10 @@
     <title>Document</title>
 </head>
 <body>
-    <h1> Holaaaaa </h1>
+    @foreach ($book as $item)
+    <h1>{{ $item->autor }}</h1>
+    <h2>{{ $item->nombre }}</h2>
+    @endforeach
+
 </body>
 </html>
