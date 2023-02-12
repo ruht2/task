@@ -10,6 +10,8 @@
     @foreach ($book as $item)
     <h1>{{ $item->autor }}</h1>
     <h2>{{ $item->nombre }}</h2>
+    <h2>{{ $item->color }}</h2>
+    <h2>{{ $item->pagina }}</h2>
     @endforeach
 
 </body>

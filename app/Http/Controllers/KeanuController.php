@@ -2,11 +2,14 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Keanu;
 use Illuminate\Http\Request;
 
 class KeanuController extends Controller
 {
     public function index(){
-        return view('ruht');
+        $data = Keanu::all();
+
+        return view('ruht',compact('data'));
     }
 }

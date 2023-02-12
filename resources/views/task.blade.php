@@ -7,6 +7,9 @@
     <title>Document</title>
 </head>
 <body>
-    <h2>Hola bienvenidos a mi ruta por un controlador</h2>
+    @foreach ($task as $item)
+    <h1>{{ $item->nombre }}</h1>
+    <h1>{{ $item->direccion }}</h1>
+    @endforeach
 </body>
 </html>

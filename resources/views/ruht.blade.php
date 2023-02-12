@@ -7,6 +7,10 @@
     <title>Document</title>
 </head>
 <body>
-    <h1> Hola </h1>
+    @foreach ($data as $erika)
+    <h1>{{ $erika->nombre }}</h1>
+    <h1>{{ $erika->genero }}</h1>
+    <h1>{{ $erika->color }}</h1>
+    @endforeach
 </body>
 </html>
