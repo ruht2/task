@@ -22,3 +22,7 @@ Route::get('task', [TaskController::class,'index'])->name('task.index');
 
 // creando una ruta para la vista ruht
 Route::get('ruht', [KeanuController::class,'index'])->name('keanu.index');
+
+
+//para crear un controlador -> php artisan make:controller WorkController
+//creas vista - y función publica. 
