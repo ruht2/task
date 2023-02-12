@@ -20,6 +20,7 @@ Route::get('/', function () {
 
 
 Route::get('task', [TaskController::class,'index'])->name('task.index');
+Route::get('task/create', [TaskController::class, 'create'])->name('task.create');
 
 // creando una ruta para la vista ruht
 Route::get('keanu', [KeanuController::class,'index'])->name('keanu.index');

@@ -13,6 +13,6 @@ class BookController extends Controller
 
         //dd($book);// se visualiza que información estoy obteniendo.
         //compact() -> es un array
-        return view('book', compact('book'));
+        return view('book', compact('book')); 
     }
 }
