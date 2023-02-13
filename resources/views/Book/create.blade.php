@@ -10,15 +10,24 @@
 </head>
 <body>
     <div class="container py-5">
-        <form>
+        <form action="{{ route('book.store') }}" method="post">
+            @csrf
             <div class="form-row">
               <div class="form-group col-md-6">
-                <label>Nombre</label>
-                <input name="nombre" type="text" class="form-control" placeholder="Ingrese nombre">
+                <label>Autor</label>
+                <input name="autor" type="text" class="form-control" placeholder="Autor">
               </div>
               <div class="form-group col-md-6">
-                <label>Dirección</label>
-                <input name="direccion" type="text" class="form-control" placeholder="Direccion">
+                <label>Nombre</label>
+                <input name="nombre" type="text" class="form-control" placeholder="Nombre">
+              </div>
+              <div class="form-group col-md-6">
+                <label>Color</label>
+                <input name="color" type="text" class="form-control" placeholder="color">
+              </div>
+              <div class="form-group col-md-6">
+                <label>Pagina</label>
+                <input name="pagina" type="text" class="form-control" placeholder="pagina">
               </div>
             </div>
             <button type="submit" class="btn btn-primary">Store</button>

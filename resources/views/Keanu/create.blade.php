@@ -10,15 +10,20 @@
 </head>
 <body>
     <div class="container py-5">
-        <form>
+        <form action="{{ route('keanu.store') }}" method="post">
+          @csrf
             <div class="form-row">
               <div class="form-group col-md-6">
                 <label>Nombre</label>
-                <input name="nombre" type="text" class="form-control" placeholder="Ingrese nombre">
+                <input name="nombre" type="text" class="form-control" placeholder="Ingrese un nombre">
               </div>
               <div class="form-group col-md-6">
-                <label>Dirección</label>
-                <input name="direccion" type="text" class="form-control" placeholder="Direccion">
+                <label>Genero</label>
+                <input name="genero" type="text" class="form-control" placeholder="Genero">
+              </div>
+              <div class="form-group col-md-6">
+                <label>Color</label>
+                <input name="color" type="text" class="form-control" placeholder="Color">
               </div>
             </div>
             <button type="submit" class="btn btn-primary">Store</button>

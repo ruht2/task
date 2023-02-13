@@ -11,7 +11,7 @@ class TaskController extends Controller
     public function index(){ //ESTA FUNCION NOS TRAE TODA LA INFORMACIÓN DE LA BD
         $task = Task::all();//traendo todos los datos de task
 
-        return view('Task.task', compact('task')); //llevando datos a la vista task
+        return view('Task.index', compact('task')); //llevando datos a la vista task
     }
 
     public function create(){
