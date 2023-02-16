@@ -7,7 +7,7 @@ use Illuminate\Http\Request;
 
 class BookController extends Controller
 {
-    public function index(){
+    public function index(){//Va a mostrar todos lo datos 
         $book = Book::all(); //primero creo una variable para obtener los datos "$book"
         //obtengo datos del modelo Book y por ultimo ->all()->me trae todo los datso de la BD.
 
@@ -16,11 +16,11 @@ class BookController extends Controller
         return view('Book.index', compact('book')); 
     }
 
-    public function create(){
+    public function create(){//Va ir a una vista de crear, o formulario 
         return view('Book.create');
     }
 
-    public function store(Request $request){
+    public function store(Request $request){//Enviar algo a la base de datos 
         $request->validate([
             'autor'=>'required',
             'nombre'=>'required',

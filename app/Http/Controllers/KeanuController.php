@@ -29,6 +29,9 @@ class KeanuController extends Controller
 
         $keanu->save();
         return redirect()->route('keanu.index');
-
+    }
+    public function destroy(Keanu $keanu){
+        $keanu->delete();
+        return back();
     }
 }

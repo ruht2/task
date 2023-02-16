@@ -10,7 +10,8 @@
 </head>
 <body>
     <div class="container py-5">
-        <form>
+        <form action="{{ route('task.store') }}" method="post">
+          @csrf 
             <div class="form-row">
               <div class="form-group col-md-6">
                 <label>Nombre</label>

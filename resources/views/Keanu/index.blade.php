@@ -25,6 +25,8 @@
               <th scope="col">Nombre</th>
               <th scope="col">genero</th>
               <th scope="col">color</th>
+
+              <th>Eliminar</th>
             </tr>
           </thead>
           <tbody>
@@ -33,6 +35,11 @@
               <td>{{ $item->nombre }}</td>
               <td>{{ $item->genero }}</td>
               <td>{{ $item->color }}</td>
+
+              <td><form action="{{ route('keanu.destroy',$item->id) }}" class="eliminar" method="post">@method('delete')  
+                @csrf             
+                <button type="submit" class="btn btn-danger">Eliminar</button>         
+              </form></td>
             </tr>
             @endforeach
           </tbody>

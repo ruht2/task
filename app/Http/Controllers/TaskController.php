@@ -18,5 +18,20 @@ class TaskController extends Controller
 
         return view('Task.create');
     }
+    public function store(Request $request){
+        $request->validate([
+            'nombre'=>'required',//que se valide
+            'direccion'=>'required',
+        ]);
+        $task = new Task();//nuevo registro
+        $task->nombre = $request->nombre;//almacenar en la columna nombre, pero tiene que estar validado
+        $task->direccion = $request->direccion;
 
+        $task->save();//para que reciba la base de datos , que se guarde
+        return redirect()->route('task.index');
+    }
+    public function destroy(Task $task){ //funcion para eliminar
+        $task->delete();
+        return back();
+    }
 }
